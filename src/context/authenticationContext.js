@@ -1,0 +1,30 @@
+import { createContext, useEffect, useState } from "react";
+
+export const AuthContext = createContext()
+
+export const AuthContextProvider = ({children}) => {
+    const [currentUser, setCurrentUser] = useState(
+        JSON.parse(localStorage.getItem("user")) || null
+    )
+
+    const login = () => {
+        //TO DO
+        setCurrentUser(
+            {
+                id: 1,
+                name: "John Doe",
+                profilePic: "https://t3.ftcdn.net/jpg/05/17/79/88/360_F_517798849_WuXhHTpg2djTbfNf0FQAjzFEoluHpnct.jpg",
+            }
+        )
+    }
+
+    useEffect(() => {
+        localStorage.setItem("user", JSON.stringify(currentUser))
+    }, [currentUser])
+
+    return(
+        <AuthContext.Provider value={{currentUser, login}}>
+            {children}
+        </AuthContext.Provider>
+    )
+}
