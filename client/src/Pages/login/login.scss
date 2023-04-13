@@ -1,0 +1,79 @@
+.login{
+    height: 100vh;
+    background-color: #007f96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card{
+        width: 60%;
+        min-height: 500px;
+        display: flex;
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        .left{
+            flex: 1;
+            background: linear-gradient(rgba(59, 7, 83, 0.5), rgba(0, 0, 0, 0.5)), url("../../../public/login_banner.jpg") center;
+            background-size: cover;
+            padding: 30px;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h1{
+                font-size: 80px;
+                line-height: 80px;
+                margin-bottom: 20px;
+            }
+            p{
+                margin-bottom: 20px;
+            }
+            span{
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+            button{
+                margin-top: 10px;
+                border: none;
+                width: 150px;
+                display: inline-block;
+                padding: 8px 32px;
+                color: purple;
+                cursor: pointer;
+            }
+            button:active{
+                background-color: rgb(206, 206, 206);
+            }
+        }
+        .right{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 30px;
+            h1{
+                margin-bottom: 30px;
+            }
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                input{
+                    border: none;
+                    border-bottom: 1px solid lightgray;
+                    padding: 20px 10px;
+                }
+                input:focus{
+                    outline: none;
+                }
+                button{
+                    width: 50%;
+                    padding:  10px;
+                    border: none;
+                    background-color: #938eef;
+                    color: white;
+                }
+            }
+        }
+    }
+}
